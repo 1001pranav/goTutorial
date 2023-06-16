@@ -50,7 +50,7 @@ Shorthand operator for assigning variables `numb := 1`
 | Type | Operator | Description |
 | --- | --- | --- |
 | Arithmetic | + - / * % ++ -- | A + B, A - B, A / B, A * B, A % B, A++, A-- |
-| Logical | && || ! | && -> And, || -> OR ! -> not |
+| Logical | && \|\| ! | && -> And, || -> OR ! -> not |
 | Assignment | =, +=, -=, *= | A+B=C, A+=B (A=A+B), A-=B (A=A-C), A*=B (A=A*B) |
 | Relational | ==, != | returns true if Left operands value is equal to right operands value then returns true, vice versa for != |
 | Miscellaneous operators | & * | & -> store the address of operators, * -> Refer Pointers of variable |
