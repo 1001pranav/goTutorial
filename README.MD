@@ -55,3 +55,6 @@ Shorthand operator for assigning variables `numb := 1`
 | Relational | ==, != | returns true if Left operands value is equal to right operands value then returns true, vice versa for != |
 | Miscellaneous operators | & * | & -> store the address of operators, * -> Refer Pointers of variable |
 
+### Arrays and Slices
+
+Syntax for Arrays - `<var>  variable_name[size]<data_types> `
