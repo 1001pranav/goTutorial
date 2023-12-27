@@ -1,9 +1,10 @@
 package main
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
-func main() {
-	var numbers = []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
-
+func basicForLoops(numbers []int) {
 	for i := 0; i < len(numbers); i++ {
 		if ( numbers[i] % 2 == 0 ) {
 			fmt.Println("Even number", numbers[i]);
@@ -11,37 +12,81 @@ func main() {
 			fmt.Println("Odd number", numbers[i]);
 		}
 	}
+}
 
-	var sum = 0;
-
+func rangeInForLoops(numbers []int) int {
+	var sum int = 0;
 	// _ is used to avoid not used warning
 	for _, value := range numbers {
-		sum = sum + value
+		sum += value
 
 	}
 
-	fmt.Println("Sum is ", sum);
-	const LONGEST_WORD = "Pneumonoultramicroscopicsilicovolcanoconiosis";
+	return sum;
+}
 
-	fmt.Println("Length of longest word is: ", len(LONGEST_WORD));
+func forWithOnlyCondition(numbers []int) map[string]int {
+	var sumOddEven = map[string]int {
+		"EVEN": 0,
+		"ODD": 0,
+	};
 
-	index := 0;
-
+	var index int = 0;
 	// Just specify the conditions
 	for index < len(numbers) {
-		fmt.Println("Numbers are: ", numbers[index]);
+		if numbers[index] % 2 == 0 {
+			sumOddEven["EVEN"] += numbers[index];
+		} else {
+			sumOddEven["ODD"] += numbers[index];
+		}
 		index += 1;
 	}
 
-	index = 0;
+	return sumOddEven;
+}
+
+func onlyForLoop(words string) map[string]int {
+	// Using int because for Loop Will convert to ASCII
+	wordsCount := make(map[string]int);
+
+	var index int = 0;
 	for {
-		fmt.Println("ASCII Value is ", LONGEST_WORD[index]);
-		if (LONGEST_WORD[index] == 'a') {
-			fmt.Println("Printing a");
-		}
-		index++;
-		if (index>= len(LONGEST_WORD)) {
+		if (index>= len(words)) {
 			break;
 		}
+
+		var charWord string = string(int(words[index]));
+		charWord = 	strings.ToUpper(charWord);
+
+		_, isValueExists := wordsCount[charWord];
+
+		if isValueExists {
+			wordsCount[charWord] += 1;
+		} else {
+			wordsCount[charWord] = 1;
+		}
+
+		index++;
+
 	}
+
+	return wordsCount;
+}
+
+func main() {
+	var numbers = []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
+
+	basicForLoops(numbers);
+
+	var sum = rangeInForLoops(numbers);
+	fmt.Println("Sum of numbers", sum);
+
+	const LONGEST_WORD = "Pneumonoultramicroscopicsilicovolcanoconiosis";
+
+	fmt.Println("Length of longest word is: ", len(LONGEST_WORD));
+	var wordsCount = onlyForLoop(LONGEST_WORD);
+	fmt.Println("Words count is", wordsCount);
+	var sumOddEven = forWithOnlyCondition(numbers);
+	fmt.Println("Sum of Even and Odd numbers are ", sumOddEven);
+
 }
