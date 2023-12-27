@@ -1,7 +1,7 @@
-package loop
+package main
 import "fmt"
 
-func loops() {
+func main() {
 	var numbers = []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
 
 	for i := 0; i < len(numbers); i++ {
@@ -21,9 +21,9 @@ func loops() {
 	}
 
 	fmt.Println("Sum is ", sum);
-	const longestWord = "Pneumonoultramicroscopicsilicovolcanoconiosis";
+	const LONGEST_WORD = "Pneumonoultramicroscopicsilicovolcanoconiosis";
 
-	fmt.Println("Length of longest word is: ", len(longestWord));
+	fmt.Println("Length of longest word is: ", len(LONGEST_WORD));
 
 	index := 0;
 
@@ -31,5 +31,17 @@ func loops() {
 	for index < len(numbers) {
 		fmt.Println("Numbers are: ", numbers[index]);
 		index += 1;
+	}
+
+	index = 0;
+	for {
+		fmt.Println("ASCII Value is ", LONGEST_WORD[index]);
+		if (LONGEST_WORD[index] == 'a') {
+			fmt.Println("Printing a");
+		}
+		index++;
+		if (index>= len(LONGEST_WORD)) {
+			break;
+		}
 	}
 }
