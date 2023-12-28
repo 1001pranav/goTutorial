@@ -55,7 +55,7 @@ func onlyForLoop(words string) map[string]int {
 			break;
 		}
 
-		var charWord string = string(int(words[index]));
+		var charWord string = string(words[index]);
 		charWord = 	strings.ToUpper(charWord);
 
 		_, isValueExists := wordsCount[charWord];
