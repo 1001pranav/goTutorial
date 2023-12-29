@@ -17,16 +17,30 @@ type person struct {
 	age int
 }
 
-type families struct {
-	father person
-	mother person
-	son person
-}
-func main() {
-	fatherDetails := person {age:50, firstName: "Sundar"};
-	motherDetails := person {firstName: "Sumithra", age: 40};
-	sonDetails := person {firstName: "Suraj", age: 25};
+type employeeDetails struct {
+	user person
+	employeeID int
 
-	pavanFamily := families{father: fatherDetails, mother: motherDetails, son: sonDetails}
-	fmt.Println(pavanFamily);
+}
+
+func (userDetails person) detail(){
+	fmt.Println("First Name is :", userDetails.firstName);
+	fmt.Println("Age is :", userDetails.age);
+}
+
+func (employee employeeDetails) detail()  {
+	fmt.Println("Employee details are * * * * v");
+	fmt.Println("Employee ID is :", employee.employeeID);
+	employee.user.detail();
+
+}
+
+func main() {
+	sundarDetails := person {age:50, firstName: "Sundar"};
+	sundarDetails.detail();
+
+	sunderJobDetails := employeeDetails{user: sundarDetails, employeeID: 1 };
+
+	sunderJobDetails.detail();
+	fmt.Println();
 }
