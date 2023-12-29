@@ -29,12 +29,13 @@ func main(){
 	// var mapExample1 map[key_dataType]value_dataType;
 	stateCapital["Karnataka"] = "Bengaluru";
 	stateCapital["Maharastra"] = "Mumbai";
-	stateCapital["Kerala"] = "kerala";
+	stateCapital["Kerala"] = "Thiruvananthapuram";
 
 	fmt.Println(stateCapital)
 
-	for state := range stateCapital {
-		fmt.Printf("Capital of", state, "is", stateCapital[state]);
+	//We an only pass Key(state) here
+	for state, city := range stateCapital {
+		fmt.Println("Capital of", state, "is", city);
 	}
 
 	capital, isCapital := stateCapital["Kerala"]
