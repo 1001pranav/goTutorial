@@ -59,6 +59,20 @@ func invalidIfCondition() {
 	}
 }
 
+func assignAndIf() bool {
+	var  valX int = 50;
+	if valY := 30; valX > valY {
+		fmt.Printf("%d is greater than %d\n", valX, valY);
+        return true;
+	}
+	return false;
+}
+
+func returnCondition() bool {
+	var c, y int = 10, 20;
+	return c == y;
+}
+
 func main() {
 	var a, c int = 5, 1;
 
@@ -75,4 +89,6 @@ func main() {
 	var weekDay = "sunday";
 	switchCondition(weekDay);
 	invalidIfCondition();
+	fmt.Println(assignAndIf());
+	fmt.Println(returnCondition());
 }
