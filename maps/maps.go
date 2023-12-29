@@ -8,6 +8,13 @@ func main(){
 		"China": "Beijing",
 	}
 
+	/*
+		Note: we can't use (.) operator to access elements
+
+		fmt.println(countryCapital.India);
+		Above will you give error
+		countryCapital.India undefined (type map[string]string has no field or method India)
+	*/
 	fmt.Println(countryCapital["India"]);
 
 	// Deleing key in map
