@@ -1,11 +1,11 @@
-package basic
+package main
 
 import (
 	"fmt"
 	"math/rand"
 )
 
-func basics() {
+func main() {
 
 	fmt.Println("Hello, World!");
 

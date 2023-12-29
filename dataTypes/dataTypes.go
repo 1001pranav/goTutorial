@@ -1,7 +1,7 @@
-package dataTypes
+package main
 import "fmt";
 
-func dataTypes() {
+func main() {
 
 	var integer int = -10001;
 	var floatVal float32 = 154.225;
