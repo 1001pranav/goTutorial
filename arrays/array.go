@@ -87,6 +87,16 @@ func sliceExample() {
 	fmt.Println(cp);
 	fmt.Println(slice);
 
+	/*
+		- The length of a slice is the number of elements it contains.
+
+		- The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice.
+
+		- The length and capacity of a slice s can be obtained using the expressions len(s) and cap(s).
+	*/
+	fmt.Println("length of slice" ,len(slice), "Capacity:", cap(slice));
+}
+
 func sliceLiterals() {
 	sl := []struct{
 		s string
