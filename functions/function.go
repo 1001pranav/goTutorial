@@ -7,8 +7,10 @@ import "fmt"
 	* func keyword is used to define new function.
 	* if we want to take any parameters to the function then we can use (paramName <dataType>)
 		else we can keep it empty ()
-    * if function return any data then after
+	* if function return any data then after
 		`func dec() <return DataType> {}`
+		* To return arrayDataType
+			`func <functionName>() <[]DataType> {...}`
 	needs to be specified.
 	* If a function has multiple return parameters then we can use following template
 		`func dec() (<return DataType>, <return DataType>) {}`
