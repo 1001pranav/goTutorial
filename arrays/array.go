@@ -86,6 +86,20 @@ func sliceExample() {
 	cp[1] = 25
 	fmt.Println(cp);
 	fmt.Println(slice);
+
+func sliceLiterals() {
+	sl := []struct{
+		s string
+		i int
+	} {
+		{"John", 4},
+		{"Alice", 5},
+		{"Bob", 3},
+		{"Doe",  3},
+	};
+
+	fmt.Println(sl);
+
 }
 
 func forLoops() {
@@ -124,4 +138,5 @@ func main() {
 	arrayAssignment();
 	sliceExample();
 	forLoops();
+	sliceLiterals();
 }
