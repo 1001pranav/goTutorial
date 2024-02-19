@@ -34,6 +34,7 @@ func assignAndIf() bool {
 		fmt.Printf("%d is greater than %d\n", valX, valY)
 		return true
 	}
+	// can't use valY here, valY is only used inside if and else block.
 	return false
 }
 
