@@ -64,7 +64,8 @@ func sliceExample() {
 	arr := [8]int{3, 5, 9, 11, 26, 21, 223}
 
 	//Creating slices from array
-	sliceArr := arr[:len(arr)]
+	sliceArr := arr[:len(arr)-1]
+	//Slices are the references of the array, Here slice is the reference of the array
 	fmt.Println("sliceArr is  ", sliceArr, arr)
 
 	// Slices are the data types which holds similar data without the limit
