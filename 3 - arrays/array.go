@@ -68,6 +68,8 @@ func sliceExample() {
 	//Slices are the references of the array, Here slice is the reference of the array
 	fmt.Println("sliceArr is  ", sliceArr, arr)
 
+	slicesArr1 := arr[:]
+	fmt.Println(slicesArr1)
 	// Slices are the data types which holds similar data without the limit
 	// Creating slices using make
 	slice := make([]int, 5, 10)
@@ -80,6 +82,7 @@ func sliceExample() {
 			so length of above slice is 5 and capacity is 10.
 	*/
 
+	// To add an element to the slice we use append method
 	slice = append(slice, 255) // This will add element in the end
 	fmt.Println(slice)
 
@@ -101,6 +104,13 @@ func sliceExample() {
 		- The length and capacity of a slice s can be obtained using the expressions len(s) and cap(s).
 	*/
 	fmt.Println("length of slice", len(slice), "Capacity:", cap(slice))
+
+	/*
+		- An empty slice is considered as 'nil'
+		- This has length and capacity as 0.
+	*/
+	var emptySlice []int
+	fmt.Println(emptySlice == nil, len(emptySlice), cap(emptySlice), emptySlice)
 }
 
 func sliceLiterals() {
